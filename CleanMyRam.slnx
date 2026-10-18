@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="CleanMyRam.vcxproj" Id="e4fe6677-6df8-4c69-a901-cf907bd22f17" />
+</Solution>

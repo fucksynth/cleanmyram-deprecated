@@ -1,0 +1,5 @@
+#include "cmr_core.h"
+
+// связываем числовые идентификаторы с реальными файлами иконок на диске
+idi_app_icon    ICON    "icon.ico"
+idi_warn_icon   ICON    "warn.ico"
