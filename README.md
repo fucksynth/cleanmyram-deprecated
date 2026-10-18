@@ -2,19 +2,19 @@
 
 tiny ram auto cleaning tool for windows. lives in ur tray area and quietly asks windows to stop being so greedy with memory.
 
-basically it's just a small wrapper around the `SetProcessWorkingSetSize` function to say to ur windows "hey so this hungry processes eating too much resources, can u pls take some memory from them and reallocate it to where it is needed more". no fancy ui, no bloat, no telemetry. one exe and that's all.
+basically its just a small wrapper around the `SetProcessWorkingSetSize` function to say to ur windows "hey so this hungry processes eating too much resources, can u pls take some memory from them and reallocate it to where it is needed more". no fancy ui, no bloat, no telemetry. one exe and thats all
 
 originally created for the fyall <3
 
 ## what it actually does
 
-every N seconds the app walks through all running processes with toolhelp snapshot and trims their working sets. windows then pushes cold pages from ram into the page file and u get some free memory back. that's the whole magic, nothing more complicated.
+every N seconds the app walks through all running processes with toolhelp snapshot and trims their working sets. windows then pushes cold pages from ram into the page file and u get some free memory back. thats the whole magic, nothing more complicated.
 
 ## features
 
 - tray icon only, no taskbar window, app starts minimized and silent
 - auto clean on timer: **15 sec**, **60 sec (recommended)** or **5 min**
-- "clean ram right now" button if u don't wanna wait
+- "clean ram right now" button if u dont wanna wait
 - "launch at windows startup" checkbox right in the tray menu
 - interval and startup flag are saved in registry, so settings survive reboot
 - warns u with a special icon in tray if u running it without admin rights
@@ -50,7 +50,7 @@ warn.ico       - shown when running without admin rights
 
 ## settings in registry
 
-u don't have to touch it manually, menu does all of it, but just for reference:
+u dont have to touch it manually, menu does all of it, but just for reference:
 
 - `HKCU\Software\cleanmyram\interval` - auto clean interval in milliseconds
 - `HKCU\Software\Microsoft\Windows\CurrentVersion\Run\cleanmyram` - startup entry with `--startup` flag
@@ -67,6 +67,6 @@ u don't have to touch it manually, menu does all of it, but just for reference:
 
 ## disclaimer
 
-trimming working sets is safe, windows just re-reads cold pages from page file when it needs them again. but still, it's a tweak, not a miracle. if u have tons of ram maybe u don't need this at all lol
+trimming working sets is safe, windows just re-reads cold pages from page file when it needs them again. but still, its a tweak, not a miracle. if u have tons of ram maybe u dont need this at all lol
 
 made by @fucksynth <3
